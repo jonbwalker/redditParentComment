@@ -1,0 +1,21 @@
+body {
+ font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+ font-size: 70%;
+}
+#status {
+ /* avoid an excessively wide status text */
+ white-space: pre;
+ /*text-overflow: ellipsis;*/
+ /*overflow: hidden;*/
+ max-width: 400px;
+}
+
+.up {
+ width: 10px;
+ height: 10px;
+}
+
+.down {
+ width: 10px;
+ height: 10px;
+}

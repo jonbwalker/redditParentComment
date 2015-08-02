@@ -1,0 +1,29 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <link rel="stylesheet" href="redditParentComment.css">
+    <title>Getting Started Extension's Popup</title>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <div id="status"></div>
+    <div>
+      <button id="up">Up</button>
+      <button id="down">Down</button>
+    </div>
+    <img id="image-result" hidden>
+  </body>
+</html>
+<script src="redditParentComment.js"></script>
+<script src="/lib/ramda.min.js"></script>
+
