@@ -48,17 +48,9 @@ function getCurrentTabUrl(callback) {
 }
 
 function moveUp() {
-  var el = document.getElementById('up');
-  el.addEventListener('click', function() {
-
-  }, false)
 }
 
 function moveDown() {
-  var el = document.getElementById('down');
-  el.addEventListener('click', function() {
-
-  }, false)
 }
 
 function renderStatus(statusText) {
@@ -78,4 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('down').style.display = '';
     }
   });
+
+  var down = document.getElementById('down');
+  var up = document.getElementById('up');
+  down.addEventListener("click", moveDown);
+  up.addEventListener("click", moveUp);
+
 });
+
+
