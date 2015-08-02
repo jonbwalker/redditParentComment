@@ -4,7 +4,7 @@
   "description": "This extension shows a Google Image search result for the current page",
   "version": "1.0",
   "browser_action": {
-    "default_icon": "reddit.png",
+    "default_icon": "icon.png",
     "default_popup": "popup.html",
     "default_title": "Reddit Parent Comment "
   },
