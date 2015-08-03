@@ -10,12 +10,12 @@ body {
  max-width: 400px;
 }
 
-.up {
+.next {
  width: 10px;
  height: 10px;
 }
 
-.down {
+.previous {
  width: 10px;
  height: 10px;
 }
