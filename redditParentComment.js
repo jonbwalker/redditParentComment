@@ -57,10 +57,9 @@ function renderStatus(statusText) {
   document.getElementById('status').textContent = statusText;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  getCurrentTabUrl(function(url) {
-    // Put the image URL in Google search.
-    console.log("URL TYPE: " +(typeof url));
+document.addEventListener('DOMContentLoaded', function () {
+  getCurrentTabUrl(function (url) {
+
     if (~url.indexOf('reddit') > -1) {
       renderStatus('You need to be on reddit');
       document.getElementById('up').style.display = 'none';
