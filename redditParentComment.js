@@ -47,33 +47,39 @@ function getCurrentTabUrl(callback) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
-function moveUp() {
+function previousComment() {
+    getCurrentComment()
 }
 
-function moveDown() {
+function nextComment() {
+    getCurrentComment()
+}
+
+function getCurrentComment() {
+
 }
 
 function renderStatus(statusText) {
-  document.getElementById('status').textContent = statusText;
+    document.getElementById('status').textContent = statusText;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  getCurrentTabUrl(function (url) {
+    getCurrentTabUrl(function (url) {
 
-    if (~url.indexOf('reddit') > -1) {
-      renderStatus('You need to be on reddit');
-      document.getElementById('up').style.display = 'none';
-      document.getElementById('down').style.display = 'none';
-    } else {
-      document.getElementById('up').style.display = '';
-      document.getElementById('down').style.display = '';
-    }
-  });
+        if (~url.indexOf('reddit') > -1) {
+            renderStatus('You need to be on reddit');
+            document.getElementById('previous').style.display = 'none';
+            document.getElementById('next').style.display = 'none';
+        } else {
+            document.getElementById('previous').style.display = '';
+            document.getElementById('next').style.display = '';
+        }
+    });
 
-  var down = document.getElementById('down');
-  var up = document.getElementById('up');
-  down.addEventListener("click", moveDown);
-  up.addEventListener("click", moveUp);
+    var previous = document.getElementById('previous');
+    var next = document.getElementById('next');
+    previous.addEventListener("click", previousComment);
+    next.addEventListener("click", nextComment);
 
 });
 
