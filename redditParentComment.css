@@ -1,21 +1,26 @@
 body {
- font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
- font-size: 70%;
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 70%;
 }
+
 #status {
- /* avoid an excessively wide status text */
- white-space: pre;
- /*text-overflow: ellipsis;*/
- /*overflow: hidden;*/
- max-width: 400px;
+    /* avoid an excessively wide status text */
+    white-space: pre;
+    /*text-overflow: ellipsis;*/
+    /*overflow: hidden;*/
+    max-width: 400px;
 }
 
 .next {
- width: 10px;
- height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 .previous {
- width: 10px;
- height: 10px;
+    width: 10px;
+    height: 10px;
+}
+
+.red {
+    background: red;
 }

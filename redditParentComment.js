@@ -48,26 +48,31 @@ function getCurrentTabUrl(callback) {
 }
 
 function previousComment() {
+    console.log('previous')
     getCurrentComment()
 }
 
 function nextComment() {
+    console.log('next')
     getCurrentComment()
-}
-
-function getCurrentComment() {
-
 }
 
 function renderStatus(statusText) {
     document.getElementById('status').textContent = statusText;
 }
 
+function getCurrentComment() {
+    //var el = document.querySelectorAll('a[class^="reddi"]');
+    //console.log(el.attributes.length)
+    //el.style.color = 'red';
+    //renderStatus('Current Element is:' + el)
+
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     getCurrentTabUrl(function (url) {
-
         if (~url.indexOf('reddit') > -1) {
-            renderStatus('You need to be on reddit');
+            renderStatus('You need to be on reddit, my lord');
             document.getElementById('previous').style.display = 'none';
             document.getElementById('next').style.display = 'none';
         } else {
